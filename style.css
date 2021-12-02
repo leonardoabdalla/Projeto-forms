@@ -35,12 +35,12 @@ main {
   flex-flow: row nowrap;
 }
 
-.labelfamily{
+.labelfamily {
   display: flex;
   flex-direction: column;
 }
 
-.labelcontent{
+.labelcontent {
   display: flex;
   flex-direction: column;
 }
