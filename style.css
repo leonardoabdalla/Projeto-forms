@@ -29,3 +29,8 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+#emailHouse {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
