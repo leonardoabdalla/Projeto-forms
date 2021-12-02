@@ -24,13 +24,23 @@ main {
   flex-direction: column;
   width: 675px;
 }
+
 #nameLastname {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
 }
+
 #emailHouse {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
+}
+
+.labelfamily{
+  display: flex;
+  flex-direction: column;
+}
+
+.labelcontent{
+  display: flex;
+  flex-direction: column;
 }
