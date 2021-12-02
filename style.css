@@ -25,5 +25,7 @@ main {
   width: 675px;
 }
 #nameLastname {
-  float: right;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
