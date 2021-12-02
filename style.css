@@ -6,11 +6,21 @@
   justify-content: space-between;
 }
 
-#trybewarts-header-title{
+#trybewarts-header-title {
   color: white;
 }
 
 .trybewarts-login {
   display: flex;
   align-items: center;
+}
+
+main {
+  display: flex;
+}
+  
+#evaluation-form {
+  display: flex;
+  flex-direction: column;
+  width: 675px;
 }

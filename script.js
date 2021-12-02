@@ -6,8 +6,7 @@ function login() {
   if (loginEmail === 'tryber@teste.com' && loginPassword === '123456') {
     alert('Olá, Tryber!');
   } else {
-    alert('Email ou senha inválidos');
+    alert('Email ou senha inválidos.');
   }
-  
 }
 buttonLogin.addEventListener('click', login);
