@@ -44,3 +44,8 @@ main {
   display: flex;
   flex-direction: column;
 }
+#info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
