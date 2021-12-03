@@ -2,19 +2,20 @@
 const buttonLogin = document.querySelector('#loginButton');
 
 //Chamando botão enviar
-const buttonEnviar = document.querySelector('#submit-btn');
+let buttonEnviar = document.querySelector('#submit-btn');
 
 //Chamando checkBox
 const checkBox = document.querySelector('#agreement')
 
 //Iniciando button desativado
 //Referência:https://developer.mozilla.org/pt-BR/docs/Web/API/Element/setAttribute
-const status = buttonEnviar.setAttribute("disabled", "disabled");
+buttonEnviar.setAttribute("disabled", true);
 
 //Função de habilitação do checkbox
 function enviar() {
+  console.log(checkBox.checked);
   if(checkBox.checked == true){
-    status = buttonEnviar.setAttribute("enable", "enable");
+    buttonEnviar.disabled = false;
   }
 }
 checkBox.addEventListener("click", enviar);
