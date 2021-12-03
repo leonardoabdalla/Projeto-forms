@@ -13,8 +13,7 @@ buttonEnviar.setAttribute('disabled', true);
 
 // Função de habilitação do checkbox
 function enviar() {
-  console.log(checkBox.checked);
-  if (checkBox.checked == true){
+  if (checkBox.checked == true) {
     buttonEnviar.disabled = false;
   }
 }
