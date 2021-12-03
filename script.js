@@ -1,14 +1,25 @@
+//Chamando botão login
 const buttonLogin = document.querySelector('#loginButton');
+
+//Chamando botão enviar
 const buttonEnviar = document.querySelector('#submit-btn');
+
+//Chamando checkBox
+const checkBox = document.querySelector('#agreement')
+
+//Iniciando button desativado
+//Referência:https://developer.mozilla.org/pt-BR/docs/Web/API/Element/setAttribute
+const status = buttonEnviar.setAttribute("disabled", "disabled");
+
+//Função de habilitação do checkbox
 function enviar() {
-  const checkBox = document.querySelector('#agreement')
-  if(checkBox.checked == false){
-    buttonEnviar.setAttribute("disabled", "disabled");
-    
+  if(checkBox.checked == true){
+    status = buttonEnviar.setAttribute("enable", "enable");
   }
 }
-buttonEnviar.addEventListener("click", enviar);
+checkBox.addEventListener("click", enviar);
 
+//Função de validação de login e senha-Requisito 3
 function login() {
   const loginEmail = document.querySelector('#email').value;
   const loginPassword = document.querySelector('#password').value;
