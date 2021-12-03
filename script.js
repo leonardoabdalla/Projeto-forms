@@ -1,4 +1,13 @@
 const buttonLogin = document.querySelector('#loginButton');
+const buttonEnviar = document.querySelector('#submit-btn');
+function enviar() {
+  const checkBox = document.querySelector('#agreement')
+  if(checkBox.checked == false){
+    buttonEnviar.setAttribute("disabled", "disabled");
+    
+  }
+}
+buttonEnviar.addEventListener("click", enviar);
 
 function login() {
   const loginEmail = document.querySelector('#email').value;
