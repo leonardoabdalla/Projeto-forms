@@ -49,3 +49,6 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+#submit-btn {
+  max-width: 20%;
+}
