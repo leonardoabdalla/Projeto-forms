@@ -17,8 +17,7 @@ function contador() {
   const textarea = document.querySelector('#textarea').value.length;
   counter.innerHTML = 500 - textarea;
 }
-textarea.addEventListener("keyup", contador);
-
+document.addEventListener('keyup', contador);
 
 // Função de habilitação do checkbox
 function enviar() {
