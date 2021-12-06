@@ -13,8 +13,8 @@ buttonEnviar.setAttribute('disabled', true);
 
 // Função para o contador
 function contador() {
-  let counter = document.querySelector('#counter');
-  let textarea = document.querySelector('#textarea').value.length;
+  const counter = document.querySelector('#counter');
+  const textarea = document.querySelector('#textarea').value.length;
   counter.innerHTML = 500 - textarea;
 }
 textarea.addEventListener("keyup", contador);
