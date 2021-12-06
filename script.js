@@ -11,9 +11,18 @@ const checkBox = document.querySelector('#agreement');
 // Referência:https://developer.mozilla.org/pt-BR/docs/Web/API/Element/setAttribute
 buttonEnviar.setAttribute('disabled', true);
 
+// Função para o contador
+function contador() {
+  let counter = document.querySelector('#counter');
+  let textarea = document.querySelector('#textarea').value.length;
+  counter.innerHTML = 500 - textarea;
+}
+textarea.addEventListener("keyup", contador);
+
+
 // Função de habilitação do checkbox
 function enviar() {
-  if (checkBox.checked) {
+  if (checkBox.checked === true) {
     buttonEnviar.disabled = false;
   }
 }
