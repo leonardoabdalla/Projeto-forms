@@ -38,3 +38,22 @@ function login() {
   }
 }
 buttonLogin.addEventListener('click', login);
+
+buttonEnviar.addEventListener('click', dadosRemove);
+
+// https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement
+function dadosRemove() {
+  const name = document.querySelector("#input-name").value;
+  const lastName = document.querySelector('#input-lastname').value;
+  const email = document.querySelector('#input-email').value;
+  const main = document.querySelector('#main');
+  const login = document.querySelector('#evaluation-form').remove();
+  const form = document.querySelector('.trybewarts-login').remove();
+  const divNova = document.createElement("div");
+  const conteudoNovo = document.createTextNode("Nome: " + name + ' ' + lastName);
+  divNova.appendChild(conteudoNovo);
+
+
+  const divAtual = document.getElementById("div1");
+  main.insertBefore(divNova, divAtual);
+}
