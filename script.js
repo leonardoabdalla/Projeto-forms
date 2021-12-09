@@ -39,21 +39,39 @@ function login() {
 }
 buttonLogin.addEventListener('click', login);
 
-buttonEnviar.addEventListener('click', dadosRemove);
+function choosen() {
+  const selectedSubjects = document.querySelectorAll('.subject:checked');
+  const choosenSubjects = [];
+  for (let i = 0; i < selectedSubjects.length; i += 1) {
+    choosenSubjects.push(selectedSubjects[i].value);
+  }
+  return choosenSubjects.join(', ');
+}
 
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement
-function dadosRemove() {
-  const name = document.querySelector("#input-name").value;
+// https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript
+function dadosRemove(event) {
+  event.preventDefault();
+  const name = document.querySelector('#input-name').value;
   const lastName = document.querySelector('#input-lastname').value;
   const email = document.querySelector('#input-email').value;
-  const main = document.querySelector('#main');
+  const house = document.querySelector('#house').value;
+  const selectedFamily = document.querySelector('input[name="family"]:checked').value;
+  const selectedRate = document.querySelector('input[name="rate"]:checked').value;
+  const textArea = document.querySelector('#textarea').value;
+  const test = choosen();
   const login = document.querySelector('#evaluation-form').remove();
-  const form = document.querySelector('.trybewarts-login').remove();
-  const divNova = document.createElement("div");
-  const conteudoNovo = document.createTextNode("Nome: " + name + ' ' + lastName);
-  divNova.appendChild(conteudoNovo);
-
-
-  const divAtual = document.getElementById("div1");
+  const form = document.querySelector('.trybewarts-login').remove(); 
+  const divNova = document.createElement('div');
+  divNova.innerHTML = `<p>Nome: ${name} ${lastName}</p>
+  <p>Email: ${email}</p>
+  <p>Casa: ${house}</p>
+  <p>Famlia: ${selectedFamily}</p>
+  <p>Matérias: ${test} </p>
+  <p>Avaliação: ${selectedRate}</p>
+  <p>Observações: ${textArea}</p>`;
+  const divAtual = document.getElementById('div1');
   main.insertBefore(divNova, divAtual);
 }
+
+buttonEnviar.addEventListener('click', dadosRemove);
