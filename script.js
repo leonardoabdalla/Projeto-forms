@@ -47,10 +47,7 @@ function choosen() {
   }
   return choosenSubjects.join(', ');
 }
-function removentoElementos() {
-  const login = document.querySelector('#evaluation-form').remove();
-  const form = document.querySelector('.trybewarts-login').remove(); 
-}
+const form = document.querySelector('#evaluation-form');
 
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement
 // https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript
@@ -64,17 +61,14 @@ function dadosRemove(event) {
   const selectedRate = document.querySelector('input[name="rate"]:checked').value;
   const textArea = document.querySelector('#textarea').value;
   const test = choosen();
-  const remove = removentoElementos()
-  const divNova = document.createElement('div');
-  divNova.innerHTML = `<p>Nome: ${name} ${lastName}</p>
+  form.innerHTML = '';
+  form.innerHTML = `<p>Nome: ${name} ${lastName}</p>
   <p>Email: ${email}</p>
   <p>Casa: ${house}</p>
   <p>Família: ${selectedFamily}</p>
   <p>Matérias: ${test} </p>
   <p>Avaliação: ${selectedRate}</p>
   <p>Observações: ${textArea}</p>`;
-  const divAtual = document.getElementById('div1');
-  main.insertBefore(divNova, divAtual);
 }
 
 buttonEnviar.addEventListener('click', dadosRemove);
