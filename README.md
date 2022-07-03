@@ -1,3 +1,1 @@
-#mavenquickstart
-
-[![Build Status]Formulário de cadastro com acesso através de login e senha.
+Formulário de cadastro com acesso através de login e senha.
